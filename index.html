@@ -1,41 +1,134 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hakkımda | Web Teknolojileri Projesi</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyzanur Yazıcı | Kişisel Web Sitesi</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Beyza Yazıcı</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Hakkımda</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="sehrim.html">Şehrim</a></li>
-            <li><a href="mirasimiz.html">Mirasımız</a></li>
-            <li><a href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo-area">
+      <div class="logo">B</div>
+      <span>Beyzanur Yazıcı</span>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="active">Hakkımda</a>
+      <a href="cv.html">CV</a>
+      <a href="sehrim.html">Şehrim</a>
+      <a href="mirasimiz.html">Mirasımız / Takımımız</a>
+      <a href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+      <a href="iletisim.html">İletişim</a>
     </nav>
-</header>
 
-<main>
+    <a href="login.html" class="login-btn">
+      <i class="fa-regular fa-user"></i>
+      Login
+    </a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+
     <section class="hero">
-        <h1>Hakkımda</h1>
-        <p>
-            Merhaba, ben Beyza. Bu web sitesi Web Teknolojileri dersi proje ödevi kapsamında hazırlanmıştır.
-            Site içerisinde kişisel bilgilerim, özgeçmişim, şehir tanıtımı, ilgi alanlarım, iletişim formu ve login sistemi yer alacaktır.
-        </p>
-    </section>
-</main>
+      <div class="hero-content">
+        <h1>Merhaba,<br>ben <span>Beyzanur.</span></h1>
 
-<footer>
-    <p>© 2026 Web Teknolojileri Proje Ödevi</p>
-</footer>
+        <p>
+          Tıp eğitimi alıyorum. Teknolojiyle çözümler üretmeyi
+          ve insanlığa fayda sağlamayı hedefliyorum.
+        </p>
+
+        <div class="icon-grid">
+          <div><i class="fa-solid fa-heart-pulse"></i></div>
+          <div><i class="fa-solid fa-dna"></i></div>
+          <div><i class="fa-solid fa-cross"></i></div>
+          <div><i class="fa-solid fa-capsules"></i></div>
+          <div><i class="fa-solid fa-brain"></i></div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="cv.html" class="primary-btn">
+            <i class="fa-solid fa-download"></i>
+            CV’mi Gör
+          </a>
+
+          <a href="iletisim.html" class="secondary-btn">
+            <i class="fa-regular fa-envelope"></i>
+            İletişime Geç
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="img/hero-beyza.png" alt="Beyzanur Yazıcı tıp ve teknoloji temalı görsel">
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section class="interest-section">
+
+      <article class="interest-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-stethoscope"></i>
+        </div>
+        <h3>Tıp</h3>
+        <p>
+          Sağlık bilimlerine ilgi duyan ve insan hayatına dokunmayı
+          hedefleyen bir tıp öğrencisiyim.
+        </p>
+        <span>→</span>
+      </article>
+
+      <article class="interest-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h3>Yapay Zeka</h3>
+        <p>
+          Yapay zeka ve makine öğrenimi alanında kendimi geliştirmeyi
+          çok seviyorum.
+        </p>
+        <span>→</span>
+      </article>
+
+      <article class="interest-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3>Web Teknolojileri</h3>
+        <p>
+          Modern web teknolojileri ile projeler geliştiriyor, yeni şeyler
+          öğrenmekten keyif alıyorum.
+        </p>
+        <span>→</span>
+      </article>
+
+      <article class="interest-card">
+        <div class="card-icon green">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h3>Sağlık Teknolojileri</h3>
+        <p>
+          Teknolojinin sağlık alanında dönüştürücü gücüne inanıyor ve
+          bu alanda çalışmak istiyorum.
+        </p>
+        <span>→</span>
+      </article>
+
+    </section>
+
+  </main>
 
 </body>
 </html>
