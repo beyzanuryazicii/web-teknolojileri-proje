@@ -604,3 +604,49 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+body {
+    text-align: center;
+    font-family: Arial;
+}
+
+/* Şehrim */
+
+.sehir-baslik {
+    color: #2c7be5;
+}
+
+.slider {
+    position: relative;
+    max-width: 700px;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.buttons button {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sehir-bilgiler {
+    max-width: 800px;
+    margin: auto;
+}
+
+.sehir-bilgiler h2 {
+    margin-top: 20px;
+    color: #2c7be5;
+}
