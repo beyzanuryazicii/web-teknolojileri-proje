@@ -5,10 +5,18 @@ let images = [
     "img/img4.jpg"
 ];
 
+let links = [
+    "yer1.html",
+    "yer2.html",
+    "yer3.html",
+    "yer4.html"
+];
+
 let index = 0;
 
 function showImage() {
     document.getElementById("sliderImage").src = images[index];
+    document.getElementById("sliderLink").href = links[index];
 }
 
 function next() {
@@ -21,4 +29,5 @@ function prev() {
     showImage();
 }
 
+// Otomatik geçiş
 setInterval(next, 3000);

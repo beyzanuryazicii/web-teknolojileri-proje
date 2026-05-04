@@ -608,17 +608,29 @@ body {
 body {
     text-align: center;
     font-family: Arial;
+    
 }
 
 /* Şehrim */
 
+body {
+    background: linear-gradient(to right, #f5f7fa, #e4e8f0);
+}
+
 .sehir-baslik {
     color: #2c7be5;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
 .slider {
-    position: relative;
+     position: relative;
     max-width: 700px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
 .slider img {
@@ -635,18 +647,89 @@ body {
 }
 
 .buttons button {
-    background: transparent;
+    background: rgba(0,0,0,0.4);
+    color: white;
     border: none;
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 50%;
 }
 
 .sehir-bilgiler {
     max-width: 800px;
-    margin: auto;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+
 
 .sehir-bilgiler h2 {
     margin-top: 20px;
     color: #2c7be5;
+    font-weight: 600;
+}
+
+
+/* Mirasımız */
+.miras-kart {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.miras-kart h2 {
+    color: #2c7be5;
+    margin-top: 20px;
+}
+
+.miras-img img {
+    max-width: 700px;
+}
+
+/* GENEL ARKA PLAN */
+body {
+    background: linear-gradient(to right, #f5f7fa, #e4e8f0);
+}
+
+/* LOGO */
+.logo-box {
+    border: 2px solid #2c7be5;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-right: 8px;
+    color: #2c7be5;
+}
+
+/* NAVBAR */
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link.active {
+    color: #2c7be5;
+    border-bottom: 2px solid #2c7be5;
+}
+
+/* BAŞLIK */
+.sehir-baslik {
+    color: #2c7be5;
+    font-weight: 700;
+}
+
+/* KART */
+.miras-kart {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.miras-kart h2 {
+    color: #2c7be5;
+    margin-top: 15px;
 }
