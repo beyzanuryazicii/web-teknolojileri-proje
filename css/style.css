@@ -733,3 +733,62 @@ body {
     color: #2c7be5;
     margin-top: 15px;
 }
+
+/* İlgi Alanlarım */
+
+/* SAYFA ARKA PLAN */
+body {
+    background: linear-gradient(to right, #f5f7fa, #e4e8f0);
+}
+
+/* BAŞLIK */
+.sehir-baslik {
+    color: #2c7be5;
+    font-weight: 700;
+}
+
+/* KART */
+.ilgi-kart {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+/* HOVER EFEKT */
+.ilgi-kart:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* İKON */
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* BAŞLIK */
+.ilgi-kart h3 {
+    color: #2c7be5;
+    margin-bottom: 10px;
+}
+
+/* METİN */
+.ilgi-kart p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* API */
+#sonuclar .card {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+#sonuclar img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}

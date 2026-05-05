@@ -3,38 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Web Teknolojileri Projesi</title>
+    <title>İlgi Alanlarım</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Beyza Yazıcı</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Hakkımda</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="sehrim.html">Şehrim</a></li>
-            <li><a href="mirasimiz.html">Mirasımız</a></li>
-            <li><a href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
 
-<main>
-    <h1 class="page-title">İlgi Alanlarım</h1>
+    <a class="navbar-brand fw-bold" href="index.html">
+      <span class="logo-box">B</span> Beyzanur Yazıcı
+    </a>
 
-    <section class="card">
-        <h2>Sayfa Hazırlanıyor</h2>
-        <p>Bu sayfa proje ilerledikçe doldurulacaktır.</p>
-    </section>
-</main>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<footer>
-    <p>© 2026 Web Teknolojileri Proje Ödevi</p>
-</footer>
+    <div class="collapse navbar-collapse justify-content-center" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+
+    <a href="login.html" class="btn btn-primary">Login</a>
+
+  </div>
+</nav>
+
+<!-- İÇERİK -->
+<div class="container mt-5">
+
+    <div class="container mt-5">
+
+    <!-- BAŞLIK -->
+    <div class="text-center mb-5">
+        <h1 class="sehir-baslik">İlgi Alanlarım</h1>
+        <p class="text-muted">
+            Sağlık, teknoloji ve insan zihni üzerine odaklandığım alanlar
+        </p>
+    </div>
+
+    <!-- KARTLAR -->
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="ilgi-kart">             
+                <h3>Sağlık</h3>
+                <p>Erken teşhis ve klinik karar destek sistemleri üzerine çalışıyorum.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ilgi-kart">               
+                <h3>Teknoloji</h3>
+                <p>Yazılım ve veri analizi ile sağlık çözümleri geliştiriyorum.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ilgi-kart">
+                <h3>Yapay Zeka</h3>
+                <p>Makine öğrenmesi ile hastalık tahmin sistemleri ilgimi çekiyor.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ilgi-kart">
+                <h3>Psikoloji</h3>
+                <p>Davranış ve bilişsel süreçleri anlamaya yönelik çalışmalar ilgimi çekiyor.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ilgi-kart">
+                <h3>Nörobilim</h3>
+                <p>Beyin fonksiyonları ve sinir sistemi üzerine araştırmalar yapıyorum.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <!-- API İÇİN HAZIR ALAN -->
+   <h2 class="text-center mt-5">Yakında...</h2>
+<p class="text-center text-muted">
+Bu bölümde dinamik veri gösterimi eklenecektir.
+</p>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
