@@ -211,6 +211,8 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
+
 /* CARDS */
 
 .interest-section {
@@ -791,4 +793,193 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+/* LOGIN SAYFASI */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* BOX */
+.login-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 350px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* BAŞLIK */
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* INPUT */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.login-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* BUTTON */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* HATA MESAJI */
+.error {
+  color: #dc2626;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* ANİMASYON */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* iletişim */
+
+.form-container {
+  max-width: 700px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  border-radius: 10px !important;
+  padding: 12px !important;
+}
+
+.custom-input:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 8px rgba(37,99,235,0.3) !important;
+}
+
+.btn {
+  border-radius: 10px !important;
+}
+
+
+/* ilgi alanlarım */
+/* HERO */
+.interest-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.interest-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 60px 10%;
+}
+
+/* CARD */
+.interest-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.interest-card i {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.interest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* API */
+.api-section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.api-box {
+  margin-top: 20px;
+}
+
+.api-box input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.api-box button {
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#filmSonuc {
+  margin-top: 20px;
 }

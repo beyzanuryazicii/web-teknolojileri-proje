@@ -1,128 +1,161 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Web Teknolojileri Projesi</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim | Beyzanur Yazıcı</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue@3"></script>
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">Beyza Yazıcı</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Hakkımda</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="sehrim.html">Şehrim</a></li>
-            <li><a href="mirasimiz.html">Mirasımız</a></li>
-            <li><a href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo-area">
+    <div class="logo">B</div>
+    <span>Beyzanur Yazıcı</span>
+  </div>
+
+  <nav class="menu">
+    <a href="index.html">Hakkımda</a>
+    <a href="cv.html">CV</a>
+    <a href="sehrim.html">Şehrim</a>
+    <a href="mirasimiz.html">Mirasımız</a>
+    <a href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+    <a href="iletisim.html" class="active">İletişim</a>
+  </nav>
+
+  <a href="login.html" class="login-btn">
+    <i class="fa-regular fa-user"></i>
+    Login
+  </a>
 </header>
 
+<!-- FORM -->
+<div class="form-container">
 
-    <title>İletişim</title>
+  <h1 class="text-center mb-4">İletişim Formu</h1>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <form id="iletisimForm" action="php/iletisim.php" method="POST">
 
-    <!-- Vue.js -->
-    <script src="https://unpkg.com/vue@3"></script>
+    <div class="form-group">
+      <label>Ad Soyad</label>
+      <input type="text" id="ad" name="ad" class="form-control custom-input">
+    </div>
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" id="email" name="email" class="form-control custom-input">
+    </div>
 
-<body>
+    <div class="form-group">
+      <label>Telefon</label>
+      <input type="text" id="telefon" name="telefon" class="form-control custom-input">
+    </div>
 
-<div class="container mt-5">
+    <div class="form-group">
+      <label>Cinsiyet</label><br>
+      <input type="radio" name="cinsiyet" value="Kadın"> Kadın
+      <input type="radio" name="cinsiyet" value="Erkek"> Erkek
+    </div>
 
-    <h1 class="text-center mb-4">İletişim Formu</h1>
+    <div class="form-group">
+      <label>İlgi Alanları</label><br>
+      <input type="checkbox" name="ilgi[]" value="Teknoloji"> Teknoloji
+      <input type="checkbox" name="ilgi[]" value="Sağlık"> Sağlık
+      <input type="checkbox" name="ilgi[]" value="Yapay Zeka"> Yapay Zeka
+    </div>
 
-    <!-- FORM -->
-    <form id="iletisimForm" action="php/iletisim.php" method="POST">
+    <div class="form-group">
+      <label>Şehir</label>
+      <select name="sehir" class="form-control custom-input">
+        <option value="">Seçiniz</option>
+        <option>İstanbul</option>
+        <option>Ankara</option>
+        <option>Sakarya</option>
+      </select>
+    </div>
 
-        <!-- İSİM -->
-        <div class="mb-3">
-            <label>Ad Soyad</label>
-            <input type="text" id="ad" name="ad" class="form-control">
-        </div>
+    <div class="form-group">
+      <label>Mesaj</label>
+      <textarea name="mesaj" id="mesaj" class="form-control custom-input"></textarea>
+    </div>
 
-        <!-- EMAIL -->
-        <div class="mb-3">
-            <label>Email</label>
-            <input type="text" id="email" name="email" class="form-control">
-        </div>
+    <div class="text-center mt-4">
 
-        <!-- TELEFON -->
-        <div class="mb-3">
-            <label>Telefon</label>
-            <input type="text" id="telefon" name="telefon" class="form-control">
-        </div>
+      <!-- JS -->
+      <button type="button" onclick="jsKontrol()" class="btn btn-primary">
+        JS ile Kontrol
+      </button>
 
-        <!-- CİNSİYET (RADIO) -->
-        <div class="mb-3">
-            <label>Cinsiyet</label><br>
-            <input type="radio" name="cinsiyet" value="Kadın"> Kadın
-            <input type="radio" name="cinsiyet" value="Erkek"> Erkek
-        </div>
+      <!-- Vue -->
+      <button type="button" id="vueBtn" class="btn btn-success">
+        Vue ile Kontrol
+      </button>
 
-        <!-- İLGİ ALANI (CHECKBOX) -->
-        <div class="mb-3">
-            <label>İlgi Alanları</label><br>
-            <input type="checkbox" name="ilgi[]" value="Teknoloji"> Teknoloji
-            <input type="checkbox" name="ilgi[]" value="Sağlık"> Sağlık
-            <input type="checkbox" name="ilgi[]" value="Yapay Zeka"> Yapay Zeka
-        </div>
+      <!-- Submit -->
+      <button type="submit" class="btn btn-danger">
+        Gönder
+      </button>
 
-        <!-- ŞEHİR (SELECT) -->
-        <div class="mb-3">
-            <label>Şehir</label>
-            <select name="sehir" class="form-control">
-                <option value="">Seçiniz</option>
-                <option value="İstanbul">İstanbul</option>
-                <option value="Ankara">Ankara</option>
-                <option value="Sakarya">Sakarya</option>
-            </select>
-        </div>
+    </div>
 
-        <!-- MESAJ -->
-        <div class="mb-3">
-            <label>Mesaj</label>
-            <textarea name="mesaj" id="mesaj" class="form-control"></textarea>
-        </div>
+  </form>
 
-        <!-- BUTONLAR -->
-        <div class="text-center mt-4">
-
-            <!-- Native JS -->
-            <button type="button" onclick="jsKontrol()" class="btn btn-primary">
-                JS ile Kontrol
-            </button>
-
-            <!-- Vue JS -->
-            <button type="button" @click="vueKontrol" class="btn btn-success">
-                Vue ile Kontrol
-            </button>
-
-            <!-- Gönder -->
-            <button type="submit" class="btn btn-danger">
-                Gönder
-            </button>
-
-        </div>
-
-    </form>
-
-    <!-- HATA MESAJI -->
-    <div id="hata" class="mt-3 text-danger text-center"></div>
+  <div id="hata" class="mt-3 text-danger text-center"></div>
 
 </div>
 
 <!-- JS -->
 <script src="js/iletisim.js"></script>
+
+<!-- VUE -->
+<script>
+const { createApp } = Vue;
+
+createApp({
+  methods: {
+    vueKontrol() {
+      let ad = document.getElementById("ad").value;
+      let email = document.getElementById("email").value;
+      let telefon = document.getElementById("telefon").value;
+
+      if(ad === "" || email === "" || telefon === ""){
+        document.getElementById("hata").innerText = "Tüm alanları doldurun!";
+        return;
+      }
+
+      if(!email.includes("@")){
+        document.getElementById("hata").innerText = "Geçerli email girin!";
+        return;
+      }
+
+      if(isNaN(telefon)){
+        document.getElementById("hata").innerText = "Telefon sadece rakam olmalı!";
+        return;
+      }
+
+      document.getElementById("hata").innerText = "Vue kontrol başarılı!";
+    }
+  }
+}).mount("#iletisimForm");
+
+// Vue butonuna bağla
+document.getElementById("vueBtn").addEventListener("click", function(){
+  Vue.createApp()._component.methods.vueKontrol();
+});
+</script>
 
 </body>
 </html>
