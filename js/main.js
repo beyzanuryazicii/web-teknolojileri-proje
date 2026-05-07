@@ -1,34 +1,72 @@
-let images = [
-    "img/img1.jpg",
-    "img/img2.jpg",
-    "img/img3.jpg",
-    "img/img4.jpg"
+const images = [
+  {
+    img: "img/img1.jpg",
+    link: "https://tr.wikipedia.org/wiki/%C5%9Eeyh_Edebali"
+  },
+
+  {
+    img: "img/img2.jpg",
+    link: "https://tr.wikipedia.org/wiki/S%C3%B6%C4%9F%C3%BCt"
+  },
+
+  {
+    img: "img/img3.jpg",
+    link: "https://tr.wikipedia.org/wiki/Bilecik"
+  },
+
+  {
+    img: "img/img4.jpg",
+    link: "https://tr.wikipedia.org/wiki/Bilecik"
+  }
 ];
 
-let links = [
-    "yer1.html",
-    "yer2.html",
-    "yer3.html",
-    "yer4.html"
-];
+let current = 0;
 
-let index = 0;
+const sliderImage = document.getElementById("sliderImage");
+const sliderLink = document.getElementById("sliderLink");
 
-function showImage() {
-    document.getElementById("sliderImage").src = images[index];
-    document.getElementById("sliderLink").href = links[index];
+function showSlide(index){
+
+  sliderImage.style.opacity = 0;
+
+  setTimeout(() => {
+
+    sliderImage.src = images[index].img;
+    sliderLink.href = images[index].link;
+
+    sliderImage.style.opacity = 1;
+
+  }, 250);
+
 }
 
-function next() {
-    index = (index + 1) % images.length;
-    showImage();
+function next(){
+
+  current++;
+
+  if(current >= images.length){
+    current = 0;
+  }
+
+  showSlide(current);
+
 }
 
-function prev() {
-    index = (index - 1 + images.length) % images.length;
-    showImage();
+function prev(){
+
+  current--;
+
+  if(current < 0){
+    current = images.length - 1;
+  }
+
+  showSlide(current);
+
 }
 
+setInterval(next, 4000);
+
+showSlide(current);
 // Otomatik geçiş
 setInterval(next, 3000);
 

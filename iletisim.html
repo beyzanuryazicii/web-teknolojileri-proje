@@ -43,56 +43,129 @@
 </header>
 
 <!-- FORM -->
-<div class="form-container">
+<div class="contact-wrapper">
 
-  <h1 class="text-center mb-4">İletişim Formu</h1>
+  <div class="contact-card">
 
-  <form id="iletisimForm" action="php/iletisim.php" method="POST">
+    <div class="contact-header">
+      <span class="contact-badge">
+        <i class="fa-regular fa-envelope"></i>
+        İletişim
+      </span>
 
-    <div class="form-group">
-      <label>Ad Soyad</label>
-      <input type="text" id="ad" name="ad" class="form-control custom-input">
+      <h1>İletişim Formu</h1>
+
+      <p>
+        Sorularınız, önerileriniz veya projeleriniz için benimle iletişime geçebilirsiniz.
+      </p>
     </div>
 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="text" id="email" name="email" class="form-control custom-input">
-    </div>
+    <form id="iletisimForm" action="php/iletisim.php" method="POST">
 
-    <div class="form-group">
-      <label>Telefon</label>
-      <input type="text" id="telefon" name="telefon" class="form-control custom-input">
-    </div>
+      <div class="form-grid">
 
-    <div class="form-group">
-      <label>Cinsiyet</label><br>
-      <input type="radio" name="cinsiyet" value="Kadın"> Kadın
-      <input type="radio" name="cinsiyet" value="Erkek"> Erkek
-    </div>
+        <div class="form-group">
+          <label>Ad Soyad</label>
 
-    <div class="form-group">
-      <label>İlgi Alanları</label><br>
-      <input type="checkbox" name="ilgi[]" value="Teknoloji"> Teknoloji
-      <input type="checkbox" name="ilgi[]" value="Sağlık"> Sağlık
-      <input type="checkbox" name="ilgi[]" value="Yapay Zeka"> Yapay Zeka
-    </div>
+          <div class="input-box">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="ad" name="ad" placeholder="Adınızı girin">
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label>Şehir</label>
-      <select name="sehir" class="form-control custom-input">
-        <option value="">Seçiniz</option>
-        <option>İstanbul</option>
-        <option>Ankara</option>
-        <option>Sakarya</option>
-      </select>
-    </div>
+        <div class="form-group">
+          <label>Email</label>
 
-    <div class="form-group">
-      <label>Mesaj</label>
-      <textarea name="mesaj" id="mesaj" class="form-control custom-input"></textarea>
-    </div>
+          <div class="input-box">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="text" id="email" name="email" placeholder="ornek@mail.com">
+          </div>
+        </div>
 
-    <div class="text-center mt-4">
+        <div class="form-group">
+          <label>Telefon</label>
+
+          <div class="input-box">
+            <i class="fa-solid fa-phone"></i>
+            <input type="text" id="telefon" name="telefon" placeholder="05xx xxx xx xx">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Şehir</label>
+
+          <div class="input-box">
+            <i class="fa-solid fa-location-dot"></i>
+
+            <select name="sehir">
+              <option value="">Şehir Seçiniz</option>
+              <option>İstanbul</option>
+              <option>Ankara</option>
+              <option>Sakarya</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group mt-4">
+        <label>Cinsiyet</label>
+
+        <div class="radio-group">
+          <label><input type="radio" name="cinsiyet" value="Kadın"> Kadın</label>
+          <label><input type="radio" name="cinsiyet" value="Erkek"> Erkek</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>İlgi Alanları</label>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="ilgi[]" value="Teknoloji"> Teknoloji</label>
+
+          <label><input type="checkbox" name="ilgi[]" value="Sağlık"> Sağlık</label>
+
+          <label><input type="checkbox" name="ilgi[]" value="Yapay Zeka"> Yapay Zeka</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Mesaj</label>
+
+        <textarea
+          name="mesaj"
+          id="mesaj"
+          rows="5"
+          placeholder="Mesajınızı yazın..."
+        ></textarea>
+      </div>
+
+      <div class="button-group">
+
+        <button type="button" onclick="jsKontrol()" class="js-btn">
+          <i class="fa-solid fa-code"></i>
+          JS Kontrol
+        </button>
+
+        <button type="button" id="vueBtn" class="vue-btn">
+          <i class="fa-brands fa-vuejs"></i>
+          Vue Kontrol
+        </button>
+
+        <button type="submit" class="send-btn">
+          <i class="fa-solid fa-paper-plane"></i>
+          Gönder
+        </button>
+
+      </div>
+
+      <div id="hata"></div>
+
+    </form>
+
+  </div>
+
+</div>
 
       <!-- JS -->
       <button type="button" onclick="jsKontrol()" class="btn btn-primary">
