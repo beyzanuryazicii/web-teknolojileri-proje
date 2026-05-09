@@ -67,9 +67,6 @@ function prev(){
 setInterval(next, 4000);
 
 showSlide(current);
-// Otomatik geçiş
-setInterval(next, 3000);
-
 
 function konuAra() {
 
