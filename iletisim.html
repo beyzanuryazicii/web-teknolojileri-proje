@@ -60,7 +60,7 @@
       </p>
     </div>
 
-    <form id="iletisimForm" action="php/iletisim.php" method="POST">
+    <form id="iletisimForm" action="php/test.php" method="POST">
 
       <div class="form-grid">
 
@@ -165,66 +165,62 @@
 
   </div>
 
-</div>
-
-      
-      <!-- Vue -->
-      <button type="button" id="vueBtn" class="btn btn-success">
-        Vue ile Kontrol
-      </button>
-
-      <!-- Submit -->
-      <button type="submit" class="btn btn-danger">
-        Gönder
-      </button>
-
-    </div>
-
-  </form>
-
-  <div id="hata" class="mt-3 text-danger text-center"></div>
-
-</div>
-
+```html
 <!-- JS -->
-<script src="js/iletisim.js"></script>
+<script src="js/main.js"></script>
 
 <!-- VUE -->
 <script>
 const { createApp } = Vue;
 
-createApp({
+const app = createApp({
+
   methods: {
+
     vueKontrol() {
+
       let ad = document.getElementById("ad").value;
       let email = document.getElementById("email").value;
       let telefon = document.getElementById("telefon").value;
 
-      if(ad === "" || email === "" || telefon === ""){
-        document.getElementById("hata").innerText = "Tüm alanları doldurun!";
-        return;
+      let hata = "";
+
+      // Ad kontrolü
+      if(ad.length < 3){
+        hata += "Ad en az 3 karakter olmalı\n";
       }
 
-      if(!email.includes("@")){
-        document.getElementById("hata").innerText = "Geçerli email girin!";
-        return;
+      // Email kontrolü
+      let regex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+      if(!regex.test(email)){
+        hata += "Geçerli email giriniz\n";
       }
 
-      if(isNaN(telefon)){
-        document.getElementById("hata").innerText = "Telefon sadece rakam olmalı!";
-        return;
+      // Telefon kontrolü
+      if(!/^[0-9]+$/.test(telefon)){
+        hata += "Telefon sadece rakam olmalı\n";
       }
 
-      document.getElementById("hata").innerText = "Vue kontrol başarılı!";
+      // Sonuç
+      document.getElementById("hata").innerText =
+        hata || "Vue kontrol başarılı ✅";
     }
-  }
-}).mount("#iletisimForm");
 
-// Vue butonuna bağla
-document.getElementById("vueBtn").addEventListener("click", function(){
-  Vue.createApp()._component.methods.vueKontrol();
+  }
+
+});
+
+// Vue uygulamasını forma bağla
+const vm = app.mount("#iletisimForm");
+
+// Butona tıklayınca çalıştır
+document.getElementById("vueBtn")
+.addEventListener("click", () => {
+  vm.vueKontrol();
 });
 </script>
 
 </body>
 </html>
+```

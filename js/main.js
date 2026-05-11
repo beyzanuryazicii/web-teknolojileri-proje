@@ -116,29 +116,3 @@ function jsKontrol() {
 }
 
 
-// VUE VALIDATION
-const app = Vue.createApp({
-
-    methods: {
-        vueKontrol() {
-
-            let ad = document.getElementById("ad").value;
-            let email = document.getElementById("email").value;
-
-            let hata = "";
-
-            if (ad.length < 3) {
-                hata += "Ad en az 3 karakter olmalı<br>";
-            }
-
-            if (!email.includes("@")) {
-                hata += "Email hatalı<br>";
-            }
-
-            document.getElementById("hata").innerHTML = hata || "Vue kontrol başarılı ✅";
-        }
-    }
-
-});
-
-app.mount("body");

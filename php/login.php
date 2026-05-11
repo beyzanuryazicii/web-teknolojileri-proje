@@ -1,65 +1,56 @@
 <?php
 
-// Veri kontrolü
-if(!isset($_POST["email"]) || !isset($_POST["sifre"])){
+$email = trim($_POST["email"] ?? "");
+$sifre = trim($_POST["sifre"] ?? "");
+
+$dogruMail = "b251210405@sakarya.edu.tr";
+$dogruSifre = "b251210405";
+
+if($email === "" || $sifre === ""){
     header("Location: ../login.html");
     exit();
 }
 
-$email = trim($_POST["email"]);
-$sifre = trim($_POST["sifre"]);
+if($email === $dogruMail && $sifre === $dogruSifre){
 
-// boş kontrol
-if($email == "" || $sifre == ""){
-    header("Location: ../login.html?error=bos");
-    exit();
-}
-
-// doğru bilgiler
-$dogru_email = "b2412100001@sakarya.edu.tr";
-$dogru_sifre = "b2412100001";
-
-// kontrol
-if($email === $dogru_email && $sifre === $dogru_sifre){
+    $ogrenciNo = explode("@", $email)[0];
 
     echo "
     <!DOCTYPE html>
-    <html>
+
+    <html lang='tr'>
+
     <head>
         <meta charset='UTF-8'>
         <title>Başarılı Giriş</title>
-        <style>
-            body {
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                height:100vh;
-                background:#2563eb;
-                color:white;
-                font-family:sans-serif;
-            }
-            .box {
-                background:white;
-                color:black;
-                padding:40px;
-                border-radius:12px;
-                text-align:center;
-                box-shadow:0 10px 30px rgba(0,0,0,0.2);
-            }
-        </style>
+
+        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet'>
     </head>
-    <body>
-        <div class='box'>
-            <h1>Hoşgeldiniz</h1>
-            <p>$email</p>
+
+    <body class='bg-dark text-white d-flex justify-content-center align-items-center vh-100'>
+
+        <div class='text-center'>
+
+            <h1>Hoşgeldiniz $ogrenciNo</h1>
+
+            <p class='mt-3'>Giriş başarılı.</p>
+
+            <a href='../index.html' class='btn btn-primary mt-3'>
+                Ana Sayfaya Dön
+            </a>
+
         </div>
+
     </body>
+
     </html>
     ";
 
 } else {
-    header("Location: ../login.html?error=1");
+
+    header("Location: ../login.html");
     exit();
+
 }
 
 ?>
